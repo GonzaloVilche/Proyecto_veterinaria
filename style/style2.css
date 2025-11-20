@@ -1,0 +1,287 @@
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #f5f5f7;
+  margin: 0;
+  padding: 0;
+  color: #1d1d1f;
+}
+
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.TituloPag {
+  font-size: 2rem;
+  color: #070707;
+  margin: 0;
+}
+
+.logo {
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.logo:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: ease 0.1s;
+}
+.Navegador {
+  display: flex;
+  gap: 2rem; 
+  align-items: center;
+}
+
+.Navegador a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #1d1d1f;
+  transition: 0.3s;
+}
+
+.Navegador a:hover {
+  color: #0071e3;
+}
+
+
+
+
+.contacto-caja {
+  max-width: 700px;
+  margin: 3rem auto;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.5s ease;
+  height: 120px; 
+}
+
+.contacto-caja:hover {
+  height: auto; 
+  min-height: 700px; 
+  padding-bottom: 2rem; 
+}
+
+
+.contacto-header {
+  text-align: center;
+  padding: 1,5rem;
+  background: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+}
+
+.contacto-header h1 {
+  margin: 0;
+  color: #111112;
+}
+
+.contacto-header p {
+  margin: 0.5rem 0 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.contacto-contenido {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 2rem;
+  transition: all 0.6s ease;
+}
+
+.contacto-caja:hover .contacto-contenido {
+  opacity: 1;
+  max-height: 2000px; 
+  padding: 2rem; 
+}
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+fieldset {
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+legend {
+  font-weight: bold;
+  color: #333;
+  padding: 0 10px;
+}
+
+label {
+  font-weight: 500;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #010910;
+  box-shadow: 0 0 6px rgba(0,113,227,0.3);
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+input[type="submit"], input[type="reset"] {
+  width: 48%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"] {
+  background: #0071e3;
+  color: white;
+}
+
+input[type="submit"]:hover {
+  background: #005bb5;
+}
+
+input[type="reset"] {
+  background: #ccc;
+  color: #333;
+}
+
+input[type="reset"]:hover {
+  background: #999;
+}
+
+form .botones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f5f5f7;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+main section {
+  max-width: 700px;
+  margin: 6rem auto; 
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+form .botones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+input[type="submit"], input[type="reset"] {
+  width: 48%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"] {
+  background: #0071e3;
+  color: white;
+}
+
+input[type="submit"]:hover {
+  background: #005bb5;
+}
+
+input[type="reset"] {
+  background: #ccc;
+  color: #333;
+}
+
+input[type="reset"]:hover {
+  background: #999;
+}
+
+ h1 {
+  text-align: center;
+  color: #333;
+  animation: aparecer 2s ease-in-out;
+}
+form {
+  margin: 20px auto;
+  width: 50%;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  animation: deslizar 1.5s ease-out;
+}
+
+@keyframes fondoAnimado {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes aparecer {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes deslizar {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../imagenes/imagen\ de\ contacto.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: moverFondo 20s linear infinite;
+  z-index: -1;
+  opacity: 1;
+  pointer-events: none; 
+}
+@keyframes moverFondo {
+  0% { background-position: 0% 0%; transform: scale(1); }
+  50% { background-position: 100% 100%; transform: scale(1.05); }
+  100% { background-position: 0% 0%; transform: scale(1); }
+}

@@ -1,0 +1,31 @@
+
+CREATE TABLE Cliente (
+    ID_Cliente INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    Apellido VARCHAR(50) NOT NULL,
+    DNI VARCHAR(20) UNIQUE NOT NULL,
+    Domicilio VARCHAR(100),
+    Numero_Telefono VARCHAR(20)
+);
+
+CREATE TABLE Mascota (
+    ID_Mascota INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    Sexo VARCHAR(10),
+    Especie VARCHAR(50),
+    Numero_Identificacion VARCHAR(30) UNIQUE,
+    ID_Dueño INT,
+    FOREIGN KEY (ID_Dueño) REFERENCES Cliente(ID_Cliente)
+);
+
+CREATE TABLE Veterinaria (
+    Numero_Orden INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre_Cliente VARCHAR(100),
+    Nombre_Mascota VARCHAR(100),
+    Servicios VARCHAR(200),
+    ID_Cliente INT,
+    ID_Mascota INT,
+    FOREIGN KEY (ID_Cliente) REFERENCES Cliente(ID_Cliente),
+    FOREIGN KEY (ID_Mascota) REFERENCES Mascota(ID_Mascota)
+);
+
